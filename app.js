@@ -52,3 +52,14 @@ document.querySelectorAll(".counter").forEach(counter => {
 function toggleMenu() {
   document.querySelector(".nav").classList.toggle("show");
 }
+// MOBILE DROPDOWN TOGGLE
+document.querySelectorAll(".dropdown > a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    // Only apply this on mobile screens
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // prevent navigation
+      const parent = this.parentElement;
+      parent.classList.toggle("open");
+    }
+  });
+});
