@@ -49,3 +49,6 @@ document.querySelectorAll(".counter").forEach(counter => {
   };
   updateCount();
 });
+function toggleMenu() {
+  document.querySelector("#navbar ul").classList.toggle("show");
+}
